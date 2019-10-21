@@ -1,0 +1,273 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign Up</h5>
+          <form [formGroup]="signupForm" novalidate>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label"
+                >First Name</label
+              >
+              <div class="col-lg-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="first_name"
+                  formControlName="first_name"
+                />
+                <div
+                  *ngIf="signupForm.get('first_name').errors"
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      !signupForm.get('first_name').pristine &&
+                      signupForm.get('first_name').errors?.required
+                    "
+                    class="error-msg"
+                  >
+                    First Name is required
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('first_name').pristine &&
+                      signupForm.get('first_name').errors?.pattern
+                    "
+                    class="error-msg"
+                  >
+                    Invalid First Name (Only aplhabatic values are required.)
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('first_name').pristine &&
+                      signupForm.get('first_name').errors?.minlength
+                    "
+                    class="error-msg"
+                  >
+                    Too Short!
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('first_name').pristine &&
+                      signupForm.get('first_name').errors?.maxlength
+                    "
+                    class="error-msg"
+                  >
+                    Maximum 40 characters required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label"
+                >Last Name</label
+              >
+              <div class="col-lg-9">
+                <input
+                  class="form-control"
+                  type="text"
+                  formControlName="last_name"
+                />
+                <div
+                  *ngIf="signupForm.get('last_name').errors"
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      !signupForm.get('last_name').pristine &&
+                      signupForm.get('last_name').errors?.required
+                    "
+                    class="error-msg"
+                  >
+                    Last Name is required
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('last_name').pristine &&
+                      signupForm.get('last_name').errors?.pattern
+                    "
+                    class="error-msg"
+                  >
+                    Invalid Last Name (Only aplhabatic values are required.)
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('last_name').pristine &&
+                      signupForm.get('last_name').errors?.minlength
+                    "
+                    class="error-msg"
+                  >
+                    Too Short!
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('last_name').pristine &&
+                      signupForm.get('last_name').errors?.maxlength
+                    "
+                    class="error-msg"
+                  >
+                    Maximum 40 characters required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label"
+                >Username</label
+              >
+              <div class="col-lg-9">
+                <input
+                  class="form-control"
+                  OnlyNumber="true"
+                  formControlName="username"
+                  id="username"
+                />
+                <div
+                  *ngIf="signupForm.get('username').errors"
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      !signupForm.get('username').pristine &&
+                      signupForm.get('username').errors?.required
+                    "
+                    class="error-msg"
+                  >
+                    Username is required
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('username').pristine &&
+                      signupForm.get('username').errors?.pattern
+                    "
+                    class="error-msg"
+                  >
+                    Invalid username (Only alpha numeric and dashes are allowed.)
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('username').pristine &&
+                      signupForm.get('username').errors?.minlength
+                    "
+                    class="error-msg"
+                  >
+                    Minimum 5 characters required.
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('username').pristine &&
+                      signupForm.get('username').errors?.maxlength
+                    "
+                    class="error-msg"
+                  >
+                    Maximum 40 characters required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label"
+                >Email</label
+              >
+              <div class="col-lg-9">
+                <input
+                  class="form-control"
+                  type="text"
+                  formControlName="email"
+                />
+                <div
+                  *ngIf="signupForm.get('email').errors"
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      !signupForm.get('email').pristine &&
+                      signupForm.get('email').errors?.required
+                    "
+                    class="error-msg"
+                  >
+                    Email is required
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('email').pristine &&
+                      signupForm.get('email').errors?.pattern
+                    "
+                    class="error-msg"
+                  >
+                    Invalid Email
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label"
+                >Password</label
+              >
+
+              <div class="col-lg-9">
+                <input
+                  class="form-control"
+                  type="password"
+                  formControlName="password"
+                  autocomplete="new-password"
+                />
+                <div
+                  *ngIf="signupForm.get('password').errors"
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      !signupForm.get('password').pristine &&
+                      signupForm.get('password').errors?.required
+                    "
+                    class="error-msg"
+                  >
+                    Password is required
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('password').pristine &&
+                      signupForm.get('password').errors?.minlength
+                    "
+                    class="error-msg"
+                  >
+                    Minimum 8 characters required.
+                  </div>
+                  <div
+                    *ngIf="
+                      !signupForm.get('password').pristine &&
+                      signupForm.get('password').errors?.maxlength
+                    "
+                    class="error-msg"
+                  >
+                    Maximum 25 characters required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-12 mx-auto d-flex justify-content-center">
+                <button
+                  class="btn btn-primary"
+                  (click)="next()"
+                  [disabled]="signupForm.invalid"
+                  type="button"
+                >
+                  Sign Up
+                </button>
+                <a
+                  class="btn btn-default"
+                  [routerLink]="['/login']"
+                >
+                  Cancel
+              </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

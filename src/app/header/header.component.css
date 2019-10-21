@@ -1,0 +1,25 @@
+.user-image {
+  width: 34px;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+
+.user-name {
+  color: #9d9d9d;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.user-description {
+  text-align: center;
+}
+
+.dropdown-menu .divider {
+  margin: 0px;
+}
+
+.dropdown-menu>li>a {
+  padding: 10px 20px;
+}
