@@ -1,4 +1,4 @@
-# Angular Seed w/jQuery & Bootstrap
+# Angular Seed with jQuery, Bootstrap and Google Login
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2
 
@@ -20,3 +20,7 @@ Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.gi
 - moment.js
 - toastr
 - Twitter Bootstrap
+
+## Configuring google login
+
+Add your client id in login component file and you are good to go.
